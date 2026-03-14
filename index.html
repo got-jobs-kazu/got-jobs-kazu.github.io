@@ -3,69 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kazuma's Portfolio Preview</title>
+  <title>Kazuma's Portfolio - UI Style</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
   <style>
-    /* 全体の設定（マイクラの空をイメージした水色背景） */
+    /* 背景を暗い洞窟や夜のような色に設定 */
     body {
-      font-family: 'DotGothic16', sans-serif; /* サイト全体の文字をドット絵風に */
-      background-color: #87CEEB; 
-      color: #333333;
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    /* 見出しの装飾（文字に影をつけてゲームっぽく） */
-    h1 {
-      color: #ffffff;
-      text-shadow: 2px 2px 0 #000000;
-      font-size: 3rem;
-    }
-
-    /* 2. CSSだけで作る「ブロック風」3Dボタンの基本スタイル（石ブロック風） */
-    .block-btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 20px;
       font-family: 'DotGothic16', sans-serif;
-      font-size: 1.5rem;
+      background-color: #2b2b2b; 
       color: #ffffff;
-      background-color: #8b8b8b; /* 石ブロックのグレー */
-      border: 4px solid #000000; /* 黒の太い縁取りでカクカク感を強調 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 画面いっぱいの高さ */
+      margin: 0;
+    }
+
+    /* インベントリや作業台のUI風のウィンドウ */
+    .inventory-box {
+      background-color: #c6c6c6; /* マイクラUI特有のグレー */
+      border: 4px solid #000000;
+      padding: 40px;
+      color: #333333; /* ウィンドウ内の文字は黒 */
       
-      /* 内側に明るい影と暗い影をつけて立体感を出す魔法のコード */
+      /* ウィンドウ枠の立体感を出す影 */
+      box-shadow: 
+        inset 6px 6px 0px rgba(255, 255, 255, 0.8), 
+        inset -6px -6px 0px rgba(85, 85, 85, 0.8);
+      
+      text-align: center;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      border-bottom: 4px solid #555555;
+      padding-bottom: 15px;
+      text-shadow: 1px 1px 0 #ffffff;
+    }
+
+    /* アイテムスロット風のボタン */
+    .slot-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 20px 0;
+      font-family: 'DotGothic16', sans-serif;
+      font-size: 1.3rem;
+      color: #ffffff;
+      background-color: #8b8b8b;
+      border: 3px solid #000000;
+      
       box-shadow: 
         inset 4px 4px 0px rgba(255, 255, 255, 0.6), 
         inset -4px -4px 0px rgba(0, 0, 0, 0.5);
-      
       cursor: pointer;
     }
 
-    /* 草ブロック風のボタン（色違い） */
-    .start-btn {
-      background-color: #5C9A36;
+    .slot-btn:hover {
+      background-color: #9e9e9e;
     }
 
-    /* ボタンをクリックした時の押し込みアクション（凹む動き） */
-    .block-btn:active {
+    .slot-btn:active {
       box-shadow: 
         inset 4px 4px 0px rgba(0, 0, 0, 0.5), 
         inset -4px -4px 0px rgba(255, 255, 255, 0.6);
-      transform: translateY(4px); /* 実際に4ピクセル下に沈む */
+      transform: translateY(2px);
     }
   </style>
 </head>
 <body>
 
-  <h1>Server Admin: Kazuma</h1>
-  <p>マイクラ風デザインのテスト画面です！</p>
-
-  <button class="block-btn">クエストを見る</button>
-  <button class="block-btn start-btn">サーバー起動</button>
+  <div class="inventory-box">
+    <h1>サーバー管理メニュー</h1>
+    <p>こちらはインベントリ（UI）風のデザインです！</p>
+    
+    <button class="slot-btn">冒険の記録（学習履歴）</button>
+    <button class="slot-btn">通信設備（コンタクト）</button>
+  </div>
 
 </body>
 </html>
