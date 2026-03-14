@@ -3,88 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kazuma's Portfolio - UI Style</title>
+  <title>Sekine's Portfolio | Server Admin</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
   <style>
-    /* 背景を暗い洞窟や夜のような色に設定 */
+    /* 全体の設定（空の水色） */
     body {
       font-family: 'DotGothic16', sans-serif;
-      background-color: #2b2b2b; 
+      background-color: #87CEEB; 
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* サイトのメインコンテナ（中央寄せで幅を制限） */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* ヘッダー装飾 */
+    header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    h1 {
       color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* 画面いっぱいの高さ */
+      text-shadow: 3px 3px 0 #000000;
+      font-size: 3rem;
       margin: 0;
     }
+    .subtitle {
+      color: #ffffff;
+      text-shadow: 1px 1px 0 #000000;
+      font-size: 1.2rem;
+    }
 
-    /* インベントリや作業台のUI風のウィンドウ */
-    .inventory-box {
-      background-color: #c6c6c6; /* マイクラUI特有のグレー */
+    /* 各セクション（土・石ブロック風のパネル） */
+    .section-box {
+      background-color: #c6c6c6; /* 石ブロック風のベース色 */
       border: 4px solid #000000;
-      padding: 40px;
-      color: #333333; /* ウィンドウ内の文字は黒 */
-      
-      /* ウィンドウ枠の立体感を出す影 */
+      padding: 30px;
+      margin-bottom: 40px;
+      /* 立体感を出す影 */
       box-shadow: 
-        inset 6px 6px 0px rgba(255, 255, 255, 0.8), 
-        inset -6px -6px 0px rgba(85, 85, 85, 0.8);
-      
-      text-align: center;
-      width: 80%;
-      max-width: 500px;
+        inset 4px 4px 0px rgba(255, 255, 255, 0.6), 
+        inset -4px -4px 0px rgba(0, 0, 0, 0.5),
+        8px 8px 0px rgba(0, 0, 0, 0.2); /* 外側の影 */
     }
 
-    h1 {
-      font-size: 2rem;
+    /* セクションの見出し */
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 4px dashed #555555;
+      padding-bottom: 10px;
       margin-top: 0;
-      border-bottom: 4px solid #555555;
-      padding-bottom: 15px;
-      text-shadow: 1px 1px 0 #ffffff;
     }
 
-    /* アイテムスロット風のボタン */
-    .slot-btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin: 20px 0;
+    /* ブロック風ボタン */
+    .block-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px 5px;
       font-family: 'DotGothic16', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: #ffffff;
       background-color: #8b8b8b;
-      border: 3px solid #000000;
-      
+      border: 4px solid #000000;
+      text-decoration: none; /* リンクの下線を消す */
       box-shadow: 
         inset 4px 4px 0px rgba(255, 255, 255, 0.6), 
         inset -4px -4px 0px rgba(0, 0, 0, 0.5);
       cursor: pointer;
+      text-align: center;
     }
 
-    .slot-btn:hover {
-      background-color: #9e9e9e;
+    .start-btn {
+      background-color: #5C9A36; /* 草ブロック風 */
     }
 
-    .slot-btn:active {
+    .block-btn:active {
       box-shadow: 
         inset 4px 4px 0px rgba(0, 0, 0, 0.5), 
         inset -4px -4px 0px rgba(255, 255, 255, 0.6);
-      transform: translateY(2px);
+      transform: translateY(4px);
+    }
+
+    /* 連絡先フォーム風の入力欄 */
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-family: 'DotGothic16', sans-serif;
+      border: 3px solid #000000;
+      box-sizing: border-box;
+      background-color: #ffffff;
     }
   </style>
 </head>
 <body>
 
-  <div class="inventory-box">
-    <h1>サーバー管理メニュー</h1>
-    <p>こちらはインベントリ（UI）風のデザインです！</p>
+  <header>
+    <h1>Server Admin: Sekine</h1>
+    <p class="subtitle">Cloud Engineer & Web Director Portfolio</p>
+  </header>
+
+  <div class="container">
     
-    <button class="slot-btn">冒険の記録（学習履歴）</button>
-    <button class="slot-btn">通信設備（コンタクト）</button>
+    <section class="section-box">
+      <h2>◆ スポーン地点（Profile）</h2>
+      <p>社内ヘルプデスクとして働きながら、クラウドエンジニアを目指して日々学習中。<br>インフラ技術への探究心から、自作サーバーの構築やWeb制作のアウトプットを行っています。</p>
+    </section>
+
+    <section class="section-box">
+      <h2>◆ メインクエスト（Works）</h2>
+      <h3>【インフラ構築】中古PCからのマイクラカスタムサーバー構築</h3>
+      <p>「友人とマルチプレイをする」という目的のため、WindowsからUbuntuへのOS入れ替え、SSH接続によるコマンド遠隔操作、ネットワークのポート開放などを経験。見えないインフラネットワークの繋がりを可視化し、LinuCの学習を実務レベルで体感しました。</p>
+      
+      <h3>【Web制作】お笑いライブ「集団下校」公式サイト</h3>
+      <p>HTML/CSS/JavaScriptをゼロから記述し、GitHub Pagesでデプロイ。ステークホルダーの要望を形にする要件定義から実装までを完遂しました。</p>
+      <a href="https://got-jobs-kazu.github.io/syudangekou-official/" target="_blank" class="block-btn">サイトを見る</a>
+    </section>
+
+    <section class="section-box">
+      <h2>◆ 冒険の記録（Log）</h2>
+      <p>AWS Cloud PractitionerやLinuCの学習記録、日々の技術的な気づきは外部の技術ブログ（note等）にまとめています。</p>
+      <a href="#" class="block-btn start-btn">学習ノートを開く（準備中）</a>
+    </section>
+
+    <section class="section-box">
+      <h2>◆ 通信設備（Contact）</h2>
+      <p>制作のご依頼や、採用に関するお問い合わせはこちらからお願いいたします。</p>
+      <form action="#" method="POST">
+        <input type="text" class="input-field" placeholder="お名前">
+        <input type="email" class="input-field" placeholder="メールアドレス">
+        <textarea class="input-field" rows="4" placeholder="メッセージ内容"></textarea>
+        <button type="submit" class="block-btn start-btn">メッセージを送信</button>
+      </form>
+    </section>
+
   </div>
 
 </body>
