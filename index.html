@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kazuma's Portfolio Preview</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+  <style>
+    /* 全体の設定（マイクラの空をイメージした水色背景） */
+    body {
+      font-family: 'DotGothic16', sans-serif; /* サイト全体の文字をドット絵風に */
+      background-color: #87CEEB; 
+      color: #333333;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    /* 見出しの装飾（文字に影をつけてゲームっぽく） */
+    h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 0 #000000;
+      font-size: 3rem;
+    }
+
+    /* 2. CSSだけで作る「ブロック風」3Dボタンの基本スタイル（石ブロック風） */
+    .block-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 20px;
+      font-family: 'DotGothic16', sans-serif;
+      font-size: 1.5rem;
+      color: #ffffff;
+      background-color: #8b8b8b; /* 石ブロックのグレー */
+      border: 4px solid #000000; /* 黒の太い縁取りでカクカク感を強調 */
+      
+      /* 内側に明るい影と暗い影をつけて立体感を出す魔法のコード */
+      box-shadow: 
+        inset 4px 4px 0px rgba(255, 255, 255, 0.6), 
+        inset -4px -4px 0px rgba(0, 0, 0, 0.5);
+      
+      cursor: pointer;
+    }
+
+    /* 草ブロック風のボタン（色違い） */
+    .start-btn {
+      background-color: #5C9A36;
+    }
+
+    /* ボタンをクリックした時の押し込みアクション（凹む動き） */
+    .block-btn:active {
+      box-shadow: 
+        inset 4px 4px 0px rgba(0, 0, 0, 0.5), 
+        inset -4px -4px 0px rgba(255, 255, 255, 0.6);
+      transform: translateY(4px); /* 実際に4ピクセル下に沈む */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Server Admin: Kazuma</h1>
+  <p>マイクラ風デザインのテスト画面です！</p>
+
+  <button class="block-btn">クエストを見る</button>
+  <button class="block-btn start-btn">サーバー起動</button>
+
+</body>
+</html>
