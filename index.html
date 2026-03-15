@@ -140,10 +140,10 @@
     <section class="section-box">
       <h2>◆ 通信設備（Contact）</h2>
       <p>制作のご依頼や、採用に関するお問い合わせはこちらからお願いいたします。</p>
-      <form action="#" method="POST">
-        <input type="text" class="input-field" placeholder="お名前">
-        <input type="email" class="input-field" placeholder="メールアドレス">
-        <textarea class="input-field" rows="4" placeholder="メッセージ内容"></textarea>
+ <form action="https://formspree.io/f/mykndegp" method="POST">
+        <input type="text" name="name" class="input-field" placeholder="お名前" required>
+        <input type="email" name="email" class="input-field" placeholder="メールアドレス" required>
+        <textarea name="message" class="input-field" rows="4" placeholder="メッセージ内容" required></textarea>
         <button type="submit" class="block-btn start-btn">メッセージを送信</button>
       </form>
     </section>
