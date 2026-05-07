@@ -73,9 +73,11 @@
       font-family: 'DotGothic16', sans-serif;
       font-size: 1.2rem;
       color: #ffffff;
-      background-color: #8b8b8b;
+
+      /* グレーを削除し、草ブロック風の緑を設定 */
+      background-color: #5C9A36;
       border: 4px solid #000000;
-      text-decoration: none; /* リンクの下線を消す */
+      text-decoration: none;
       box-shadow: 
         inset 4px 4px 0px rgba(255, 255, 255, 0.6), 
         inset -4px -4px 0px rgba(0, 0, 0, 0.5);
@@ -139,7 +141,7 @@
       <p>HTML/CSS/JavaScriptをゼロから記述し、GitHub Pagesでデプロイ。ステークホルダーの要望を形にする要件定義から実装までを完遂しました。</p>
       
       <a href="https://got-jobs-kazu.github.io/syudangekou-official/" target="_blank" class="block-btn">サイトを見る</a>
-      <a href="https://github.com/got-jobs-kazu/syudangekou-official/blob/main/index.html" target="_blank" class="block-btn">レポジトリを見る</a>
+      <a href="https://got-jobs-kazu.github.io/syudangekou-official/" target="_blank" rel="noopener noreferrer" class="block-btn">サイトを見る</a>
     </section>
 <section class="section-box">
       <h2>◆ 冒険の記録（Log）</h2>
@@ -150,9 +152,10 @@
     <section class="section-box">
       <h2>◆ 通信設備（Contact）</h2>
       <p>制作のご依頼や、採用に関するお問い合わせはこちらからお願いいたします。</p>
- <form action="https://formspree.io/f/mykndegp" method="POST">
+<form action="https://formspree.io/f/mykndegp" method="POST">
+        <input type="text" name="_gotcha" style="display:none" />
+        
         <input type="text" name="name" class="input-field" placeholder="お名前" required>
-        <input type="email" name="email" class="input-field" placeholder="メールアドレス" required>
         <textarea name="message" class="input-field" rows="4" placeholder="メッセージ内容" required></textarea>
         <button type="submit" class="block-btn start-btn">メッセージを送信</button>
       </form>
